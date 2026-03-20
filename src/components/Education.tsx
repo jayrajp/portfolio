@@ -6,9 +6,9 @@ export default function Education() {
       degree: 'B.Tech in Information Technology',
       institution: 'Dharamsinh Desai University',
       location: 'Gujarat, India',
-      period: '2020 - Present',
-      score: 'CGPA: 8.5+',
-      description: 'Specialized in software development, microservices architecture, cloud computing, and modern DevOps practices.'
+      period: '2016 - 2020',
+      score: 'CGPA: 7.5+',
+      description: 'Built a strong foundation in core Computer Science fundamentals, including Data Structures & Algorithms (DSA), Object-Oriented Programming, and Database Management. Gained hands-on experience with multiple programming languages such as C, C++, Java, and Python, along with specialized knowledge in software development and modern technologies.'
     }
   ];
 

@@ -27,14 +27,14 @@ export default function Contact() {
     {
       icon: <Mail size={24} />,
       title: 'Email',
-      content: 'jayraj.mehta@example.com',
-      link: 'mailto:jayraj.mehta@example.com'
+      content: 'jayraj.semicolon@gmail.com',
+      link: 'mailto:jayraj.semicolon@gmail.com'
     },
     {
       icon: <Phone size={24} />,
       title: 'Phone',
-      content: '+91 98765 43210',
-      link: 'tel:+919876543210'
+      content: '+91 8200406834',
+      link: 'tel:+918200406834'
     },
     {
       icon: <MapPin size={24} />,

@@ -3,10 +3,24 @@ import { Briefcase, Calendar, MapPin } from 'lucide-react';
 export default function Experience() {
   const experiences = [
     {
+      title: 'Freelance Software Developer',
+      company: 'Self-Employed',
+      location: 'Gujarat, India',
+      period: '2026 - Present',
+      type: 'Freelance',
+      responsibilities: [
+        'Building a full-scale SaaS product from scratch covering CRM, ERP, and enterprise business modules',
+        'Designing and implementing AI-powered features using RAG (Retrieval-Augmented Generation) for intelligent data processing',
+        'Developing multiple business models including inventory, billing, HR, and customer management systems',
+        'Architecting scalable multi-tenant SaaS infrastructure with role-based access control',
+        'Integrating LLM-based AI models for smart automation and data insights within the platform'
+      ]
+    },
+    {
       title: 'Software Engineer',
       company: 'Triveni Global Software Services LLP',
       location: 'Gujarat, India',
-      period: '2024 - Present',
+      period: '2024 - 2025',
       type: 'Full-time',
       responsibilities: [
         'Designing and implementing scalable microservices architecture',

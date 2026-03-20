@@ -3,29 +3,26 @@ import { ExternalLink, Github } from 'lucide-react';
 export default function Projects() {
   const projects = [
     {
-      title: 'ZOIS',
-      description: 'A modern scalable application with strong backend architecture and microservices. Built with MERN stack, featuring real-time updates and high performance optimization.',
-      image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['MERN', 'Microservices', 'Docker', 'Kubernetes'],
-      github: 'https://github.com',
-      demo: 'https://example.com'
+      title: 'Unicorn UI',
+      description: 'A React-based design marketplace platform supporting a subscription model for buying and selling digital assets. Built user and admin panels, integrated secure payment gateways, and implemented backend APIs for smooth transactions. Delivered a scalable and responsive solution enhancing platform usability and supporting designer community growth.',
+      image: '/portfolio/unicorn.png',
+      tags: ['React', 'JavaScript', 'Tailwind CSS', 'Storybook', 'Payment Gateway'],
+      demo: 'https://www.unicornui.com/'
     },
     {
-      title: 'Unicorn UI',
-      description: 'A comprehensive UI component library with modern design patterns and responsive components. Designed for scalability with excellent documentation and examples.',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['React', 'TypeScript', 'Tailwind CSS', 'Storybook'],
-      github: 'https://github.com',
-      demo: 'https://example.com'
+      title: 'Provibiz ERP',
+      description: 'A comprehensive cloud-based ERP solution designed to streamline business operations, enhance productivity, and drive growth. Features centralized data management, real-time analytics dashboards, automated workflows across Finance, HR, Sales, and Operations departments, with industry-leading security protocols and customizable modules for modern businesses.',
+      image: '/portfolio/provibiz.png',
+      tags: ['MERN', 'Microservices', 'Docker', 'Kubernetes', 'Cloud', 'ERP'],
+      demo: 'http://provibiz.com/'
     },
     {
       title: 'DogDash',
-      description: 'Modern scalable application with strong backend and intuitive UI. Features real-time data processing and optimized performance for seamless user experience.',
-      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['React', 'Node.js', 'MongoDB', 'Redis'],
-      github: 'https://github.com',
-      demo: 'https://example.com'
-    }
+      description: 'A mobile app connecting customers and drivers for safe dog transport, featuring ride request, accept, and live tracking functionality. Integrated secure payment flow to automatically deduct from customers and credit drivers upon successful delivery. Delivered a smooth and reliable user experience increasing trust and platform adoption.',
+      image: '/portfolio/dogdash.png',
+      tags: ['React Native', 'Node.js', 'MongoDB', 'Live Tracking', 'Payment Gateway'],
+      demo: 'https://apps.apple.com/in/app/dogdash-driver/id1491146041'
+    },
   ];
 
   return (
@@ -77,7 +74,7 @@ export default function Projects() {
                 </div>
 
                 <div className="flex gap-4">
-                  <a
+                  {/* <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -85,7 +82,7 @@ export default function Projects() {
                   >
                     <Github size={20} />
                     <span>Code</span>
-                  </a>
+                  </a> */}
                   <a
                     href={project.demo}
                     target="_blank"

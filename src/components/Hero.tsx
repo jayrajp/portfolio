@@ -15,6 +15,11 @@ export default function Hero() {
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
               Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">Jayraj Mehta</span>
             </h1>
+            {/* Experience Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-full">
+              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+              <span className="text-green-400 font-semibold">6+ Years of Experience</span>
+            </div>
             <p className="text-2xl md:text-3xl text-gray-300 font-light">
               Full-Stack Developer | MERN & MEAN | Microservices | DevOps
             </p>
@@ -43,13 +48,18 @@ export default function Hero() {
             </div>
 
             <div className="flex gap-6 pt-4">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
+              <a href="https://github.com/jayrajp" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
                 <Github size={28} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
+              <a href="https://www.linkedin.com/in/jayraj-mehta-6bb311199?utm_source=share_via&utm_content=profile" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
                 <Linkedin size={28} />
               </a>
-              <a href="mailto:jayraj@example.com" className="hover:text-blue-400 transition-colors">
+              <a 
+                href="https://mail.google.com/mail/?view=cm&to=jayraj.semicolon@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-400 transition-colors"
+              >
                 <Mail size={28} />
               </a>
             </div>
@@ -60,9 +70,9 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-2xl opacity-50 animate-pulse"></div>
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl">
                 <img
-                  src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="/portfolio/jayraj.jpeg"
                   alt="Jayraj Mehta"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
             </div>
