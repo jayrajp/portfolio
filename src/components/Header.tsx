@@ -1,93 +1,64 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const [open, setOpen] = useState(false);
 
   const navItems = [
-    { href: '#home', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#education', label: 'Education' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#experience', label: 'Experience' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#contact', label: 'Contact' },
+    { href: '#problem', label: 'Problem' },
+    { href: '#process', label: 'Process' },
+    { href: '#services', label: 'Services' },
+    { href: '#work', label: 'Work' },
+    { href: '#engagement', label: 'Engagement' },
   ];
 
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const scroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
-    }
+    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    setOpen(false);
   };
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
-      }`}
-    >
-      <nav className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          <a
-            href="#home"
-            onClick={(e) => scrollToSection(e, '#home')}
-            className={`text-2xl font-bold transition-colors ${
-              isScrolled ? 'text-gray-800' : 'text-white'
-            }`}
-          >
-            Jayraj Mehta
-          </a>
-
-          <div className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={(e) => scrollToSection(e, item.href)}
-                className={`transition-colors hover:opacity-80 ${
-                  isScrolled ? 'text-gray-700' : 'text-white'
-                }`}
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
-
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden ${isScrolled ? 'text-gray-800' : 'text-white'}`}
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+    <nav className="pf-nav">
+      <div className="wrap">
+        <div className="logo">
+          <span className="logo-dot" />
+          jayraj.mehta
         </div>
 
-        {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-4 bg-white rounded-lg shadow-lg p-6">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={(e) => scrollToSection(e, item.href)}
-                className="block text-gray-700 hover:text-gray-900 transition-colors"
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
-        )}
-      </nav>
-    </header>
+        <div className="navlinks">
+          {navItems.map(item => (
+            <a key={item.href} href={item.href} onClick={e => scroll(e, item.href)}>
+              {item.label}
+            </a>
+          ))}
+        </div>
+
+        <a className="nav-cta" href="#contact" onClick={e => scroll(e, '#contact')}>
+          Book a free call
+        </a>
+
+        <button
+          onClick={() => setOpen(!open)}
+          style={{ display: 'none', color: 'var(--text)', background: 'none', border: 'none', cursor: 'pointer' }}
+          className="md-menu-btn"
+        >
+          {open ? <X size={22} /> : <Menu size={22} />}
+        </button>
+      </div>
+
+      {open && (
+        <div style={{ background: 'var(--surface)', borderTop: '1px solid var(--line)', padding: '16px 28px', display: 'flex', flexDirection: 'column', gap: 12 }}>
+          {navItems.map(item => (
+            <a key={item.href} href={item.href} onClick={e => scroll(e, item.href)} style={{ color: 'var(--text-dim)', fontSize: 14 }}>
+              {item.label}
+            </a>
+          ))}
+          <a href="#contact" onClick={e => scroll(e, '#contact')} style={{ color: 'var(--teal)', fontFamily: 'JetBrains Mono, monospace', fontSize: 13 }}>
+            Book a free call →
+          </a>
+        </div>
+      )}
+    </nav>
   );
 }

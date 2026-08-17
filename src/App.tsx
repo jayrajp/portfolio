@@ -1,25 +1,32 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
-import About from './components/About';
-import Education from './components/Education';
-import Skills from './components/Skills';
-import Tools from './components/Tools';
-import Experience from './components/Experience';
+import Problem from './components/Problem';
+import WhyCustom from './components/WhyCustom';
+import Process from './components/Process';
+import Services from './components/Services';
 import Projects from './components/Projects';
+import Industries from './components/Industries';
+import StackMarquee from './components/StackMarquee';
+import Engagement from './components/Engagement';
+import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div>
+      <div className="bg-grid" />
       <Header />
       <Hero />
-      <About />
-      <Education />
-      <Skills />
-      <Tools />
-      <Experience />
+      <Problem />
+      <WhyCustom />
+      <Process />
+      <Services />
       <Projects />
+      <Industries />
+      <StackMarquee />
+      <Engagement />
+      <FAQ />
       <Contact />
       <Footer />
     </div>
